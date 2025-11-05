@@ -1,0 +1,33 @@
+cat > .gitignore << 'EOF'
+#Archivos del sistema
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_store
+Thumbs.db
+
+#configuracion sensible
+.env
+
+#Dependencias / builds
+/vendor/
+node_modules/
+composer.lock
+package-lock.json
+
+#Archivos temporales y cache
+/cache/
+/tmp/
+/logs/
+/uploads/temp/
+/sessions/
+
+#Archivos de Apache y backups
+.htaccess~
+error_log
+
+#Archivos del IDE / Editor
+.vscode/
+.idea/
+nbproject/

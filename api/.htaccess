@@ -1,0 +1,13 @@
+# Redirigir directorio raíz a pregas.php
+DirectoryIndex pregas.php index.php
+
+# Activar rewrite engine
+RewriteEngine On
+
+# Si acceden a la raíz, redirigir a pregas.php
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ pregas.php [L]
+
+# Si acceden a /reintegro_api/ redirigir a pregas.php
+RewriteCond %{REQUEST_URI} ^/reintegro_api/$
+RewriteRule ^$ pregas.php [L]
